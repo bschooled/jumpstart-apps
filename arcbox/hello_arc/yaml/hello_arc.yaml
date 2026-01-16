@@ -33,4 +33,4 @@ spec:
         - containerPort: 8080
         env:
         - name: MESSAGE
-          value: This is Fluxv2 applied GitOps deployment!"
+          value: "Watch me change!" #This is an Azure GitOps Arc Gitops Demo!
