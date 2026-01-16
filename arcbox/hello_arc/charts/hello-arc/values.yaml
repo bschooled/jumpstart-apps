@@ -14,6 +14,13 @@ env:
   name: MESSAGE
   value: Helm chart testing!
 
+# Selector mode:
+# - default: use the standard `app.kubernetes.io/*` selector labels.
+# - legacy: use `app: hello-arc` so this chart can adopt resources created from the plain YAML example.
+selector:
+  useLegacyAppLabel: false
+  legacyAppLabel: hello-arc
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""

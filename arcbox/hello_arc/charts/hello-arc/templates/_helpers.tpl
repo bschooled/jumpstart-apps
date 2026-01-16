@@ -47,8 +47,12 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 Selector labels
 */}}
 {{- define "hello-arc.selectorLabels" -}}
+{{- if .Values.selector.useLegacyAppLabel }}
+app: {{ .Values.selector.legacyAppLabel | default "hello-arc" }}
+{{- else }}
 app.kubernetes.io/name: {{ include "hello-arc.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}
 {{- end }}
 
 {{/*
