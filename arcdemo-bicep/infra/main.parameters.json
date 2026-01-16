@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "centralus"
+    },
+    "registryName": {
+      "value": "ctecharcdemoACR"
+    },
+    "registrySku": {
+      "value": "Premium"
+    },
+    "adminUserEnabled": {
+      "value": false
+    },
+    "dataEndpointEnabled": {
+      "value": true
+    },
+    "userPrincipalObjectId": {
+      "value": "85da19a5-6738-4b39-8cb7-9b154785734d"
+    },
+    "connectedRegistryName": {
+      "value": "ctecharcdemoConnectedRegistry"
+    },
+    "connectedRegistryMode": {
+      "value": "ReadWrite"
+    },
+    "connectedRegistryParentId": {
+      "value": ""
+    },
+    "connectedRegistryTokenName": {
+      "value": "ctecharcdemoConnectedRegistryToken"
+    },
+    "connectedRegistryScopeMapName": {
+      "value": "ctecharcdemoConnectedRegistryScopeMap"
+    },
+    "connectedRegistryScopeMapActions": {
+      "value": [
+        "repositories/*/content/read",
+        "repositories/*/metadata/read",
+        "repositories/*/content/write",
+        "repositories/*/metadata/write"
+      ]
+    },
+    "connectedRegistryMessageTtl": {
+      "value": "P1D"
+    },
+    "tags": {
+      "value": {
+        "environment": "dev"
+      }
+    },
+    "aksName": {
+      "value": ""
+    },
+    "aksNodeResourceGroup": {
+      "value": ""
+    }
+  }
+}

@@ -1,0 +1,6 @@
+name: arcdemo-bicep
+metadata:
+  template: arcdemo-bicep@0.0.1
+infra:
+  provider: bicep
+  path: infra
